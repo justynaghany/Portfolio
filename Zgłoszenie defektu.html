@@ -1,0 +1,713 @@
+<html
+        xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Jira</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\,";
+    mso-displayed-thousand-separator:" ";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="44">
+            <img src="https://akademiatestowania.atlassian.net/images/icon-jira-software-logo.png" width="57" height="30" border="0" alt="Jira">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="44">
+            <a href="https://akademiatestowania.atlassian.net/issues/?jql=created+%3E%3D+-30d+AND+issuetype+%3D+Bug+AND+reporter+in+%28currentUser%28%29%29+order+by+created+DESC">Jira</a>
+        </td>
+    </tr>
+    <tr>
+                <td colspan="44">
+            Wyświetlane zgłoszenia <strong>4</strong> w <strong>09/maj/23 8:57 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable" class="aui " border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                                                        Projekt
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                                                        Klucz
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                                                        Podsumowanie
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                                                        Typ zgłoszenia
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                                                        Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                                                        Priorytet
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                                                        Rozwiązanie
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                                                        Osoba przypisana
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                                                        Osoba zgłaszająca
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                                                        Twórca
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                                                        Utworzono
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed" data-id="lastViewed">
+                                                        Ostatnio wyświetlane
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                                                        Zaktualizowano
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                                                        Rozwiązane
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-versions" data-id="versions">
+                                                        Ma wpływ na wersje
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions" data-id="fixVersions">
+                                                        Wersje do poprawienia
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-components" data-id="components">
+                                                        Komponenty
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                                                        Termin
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-votes" data-id="votes">
+                                                        Głosy
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches" data-id="watches">
+                                                        Obserwujący
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail" data-id="thumbnail">
+                                                        Obrazy
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                                                        Pierwotne oszacowanie
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate" data-id="timeestimate">
+                                                        Pozostały koszt
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent" data-id="timespent">
+                                                        Czas poświęcony
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio" data-id="workratio">
+                                                        Stosunek pracy
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks" data-id="subtasks">
+                                                        Podzadania
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks" data-id="issuelinks">
+                                                        Połączone zgłoszenia
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment" data-id="environment">
+                                                        Środowisko
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                                                        Opis
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security" data-id="security">
+                                                        Poziom zabezpieczeń
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress" data-id="progress">
+                                                        Postęp
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress" data-id="aggregateprogress">
+                                                        Σ Postęp
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                                                        Σ Czas poświęcony
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate" data-id="aggregatetimeestimate">
+                                                        Σ Pozostały koszt
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate" data-id="aggregatetimeoriginalestimate">
+                                                        Σ Pierwotne oszacowanie
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels" data-id="labels">
+                                                        Etykiety
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statuscategorychangedate" data-id="statuscategorychangedate">
+                                                        Kategoria statusu uległa zmianie
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statusCategory" data-id="statusCategory">
+                                                        Kategoria statusu
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-parent" data-id="parent">
+                                                        Nadrzędny
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10021" data-id="customfield_10021">
+                                                        Flagged
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10019" data-id="customfield_10019">
+                                                        Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10020" data-id="customfield_10020">
+                                                        Sprint
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10016" data-id="customfield_10016">
+                                                        Story point estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000" data-id="customfield_10000">
+                                                        Development
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10110" rel="10110" data-issuekey="ATW20-104" class="issuerow">
+                                            <td class="project">    Akademia Testowania Wieczorowa 25.04
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="ATW20-104" href="https://akademiatestowania.atlassian.net/browse/ATW20-104">ATW20-104</a>
+</td>
+                                            <td class="summary"><p>
+                Po wejściu na zakładkę “BLOG“ pojawia się komunikat &#39;&#39;NOTHING FOUND&#39;&#39;
+    </p>
+</td>
+                                            <td class="issuetype">    Błąd w programie
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;New&lt;/span&gt;">New</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Nierozwiązane</em>
+</td>
+                                            <td class="assignee">            Justyna Ghany
+    </td>
+                                            <td class="reporter">            Justyna Ghany
+    </td>
+                                            <td class="creator">            Justyna Ghany
+    </td>
+                                            <td class="created"> 04/maj/23 6:56 PM </td>
+                                            <td class="lastViewed"> 09/maj/23 8:56 PM </td>
+                                            <td class="updated"> 09/maj/23 7:32 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">2</td>
+                                            <td class="thumbnail">            <a href="https://akademiatestowania.atlassian.net/secure/attachment/10028/image-20230504-170451.png">
+            image-20230504-170451.png
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      *Opis:*<br/>
+<br/>
+Po wejściu na zakładkę “BLOG“ pojawia się komunikat &#39;&#39;NOTHING FOUND&#39;&#39; z okienkiem “Search“<br/>
+<br/>
+*Środowisko:*<br/>
+Testowe 01<br/>
+<br/>
+*Priorytet:*<br/>
+<br/>
+Niski<br/>
+<br/>
+*Impact:*<br/>
+<br/>
+Niski<br/>
+<br/>
+*Kroki do reprodukcji:*<br/>
+<br/>
+# Otwieramy stronę [https://skleptest.pl/|https://skleptest.pl/|smart-link]<br/>
+# Przechodzimy do zakładek<br/>
+# Wybieramy zakładkę “BLOG“<br/>
+<br/>
+*Rzeczywisty rezultat:*<br/>
+<br/>
+Po wejściu na zakładkę “BLOG“ pojawia się komunikat &#39;&#39;NOTHING FOUND&#39;&#39; z okienkiem “Search“<br/>
+<br/>
+*Oczekiwany rezultat:*<br/>
+<br/>
+Po wejściu na zakładkę “BLOG“ zostajemy poprawnie do niej przekierowani.<br/>
+<br/>
+*Załącznik:*<br/>
+<br/>
+!image-20230509-173254.png|width=1211,height=514!<br/>
+<br/>
+!image-20230504-170451.png|width=794,height=514!
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    Zakładki</td>
+                                            <td class="statuscategorychangedate"> 04/maj/23 7:24 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Do zrobienia</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10019">      0|i000av:9
+  </td>
+                                            <td class="customfield_10020">Sprint 1</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10103" rel="10103" data-issuekey="ATW20-97" class="issuerow">
+                                            <td class="project">    Akademia Testowania Wieczorowa 25.04
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="ATW20-97" href="https://akademiatestowania.atlassian.net/browse/ATW20-97">ATW20-97</a>
+</td>
+                                            <td class="summary"><p>
+                Przy zakładce &#39;&#39;MOST WANTED&#39;&#39; nazwa sklepu jest przesunięta
+    </p>
+</td>
+                                            <td class="issuetype">    Błąd w programie
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;New&lt;/span&gt;">New</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Nierozwiązane</em>
+</td>
+                                            <td class="assignee">            Justyna Ghany
+    </td>
+                                            <td class="reporter">            Justyna Ghany
+    </td>
+                                            <td class="creator">            Justyna Ghany
+    </td>
+                                            <td class="created"> 04/maj/23 6:48 PM </td>
+                                            <td class="lastViewed"> 09/maj/23 7:52 PM </td>
+                                            <td class="updated"> 09/maj/23 7:52 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">2</td>
+                                            <td class="thumbnail">            <a href="https://akademiatestowania.atlassian.net/secure/attachment/10063/image-20230509-175200.png">
+            image-20230509-175200.png
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      *Opis:*<br/>
+<br/>
+Przy zakładce &#39;&#39;MOST WANTED&#39;&#39; nazwa sklepu jest przesunięta w lewo, co wygląda nieestetycznie.<br/>
+<br/>
+*Środowisko:*<br/>
+Testowe 01<br/>
+<br/>
+*Priorytet:*<br/>
+<br/>
+Niski<br/>
+<br/>
+*Impact:*<br/>
+<br/>
+Niski<br/>
+<br/>
+*Kroki do reprodukcji:*<br/>
+<br/>
+# Otwieramy stronę [https://skleptest.pl/|https://skleptest.pl/|smart-link]<br/>
+# Przechodzimy do zakładek<br/>
+# Klikamy zakładkę “MOST WANTED“<br/>
+<br/>
+*Rzeczywisty rezultat:*<br/>
+<br/>
+Po wejściu w zakładkę “MOST WANTED“ Nazwa sklepu jest przesunięta lekko w lewą stronę.<br/>
+<br/>
+*Oczekiwany rezultat:*<br/>
+<br/>
+Po wejściu w zakładkę “MOST WANTED“ Nazwa sklepu jest w takim samym miejscu jak na pozostałych zakładkach.<br/>
+<br/>
+*Załącznik:*<br/>
+<br/>
+!2023-05-04 18 52 25.mp4|width=1672,height=858!<br/>
+<br/>
+!image-20230509-175200.png|width=474,height=282!
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    Zakładki</td>
+                                            <td class="statuscategorychangedate"> 04/maj/23 7:24 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Do zrobienia</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10019">      0|i000av:4
+  </td>
+                                            <td class="customfield_10020">Sprint 1</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10092" rel="10092" data-issuekey="ATW20-86" class="issuerow">
+                                            <td class="project">    Akademia Testowania Wieczorowa 25.04
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="ATW20-86" href="https://akademiatestowania.atlassian.net/browse/ATW20-86">ATW20-86</a>
+</td>
+                                            <td class="summary"><p>
+                Błędne przekierowanie zakładki &#39;&#39;ABOUT US&#39;&#39; przekierowuje na zakładkę &#39;&#39;CONTACT&#39;&#39; i podświetla obie na czerwono
+    </p>
+</td>
+                                            <td class="issuetype">    Błąd w programie
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;New&lt;/span&gt;">New</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Nierozwiązane</em>
+</td>
+                                            <td class="assignee">            Justyna Ghany
+    </td>
+                                            <td class="reporter">            Justyna Ghany
+    </td>
+                                            <td class="creator">            Justyna Ghany
+    </td>
+                                            <td class="created"> 04/maj/23 6:36 PM </td>
+                                            <td class="lastViewed"> 09/maj/23 7:13 PM </td>
+                                            <td class="updated"> 09/maj/23 7:12 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">2</td>
+                                            <td class="thumbnail">            <a href="https://akademiatestowania.atlassian.net/secure/attachment/10035/image-20230509-171003.png">
+            image-20230509-171003.png
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      *Opis:*<br/>
+<br/>
+Po wejściu na zakładkę &#39;&#39;ABOUT US&#39;&#39; przekierowuje nas na zakładkę &#39;&#39;CONTACT&#39;&#39; i podświetla obie te zakładki na czerwono.<br/>
+<br/>
+*Środowisko:*<br/>
+Testowe 01<br/>
+<br/>
+*Priorytet:*<br/>
+<br/>
+Niski<br/>
+<br/>
+*Impact:*<br/>
+<br/>
+Niski<br/>
+<br/>
+*Kroki do reprodukcji:*<br/>
+<br/>
+# Otwieramy stronę [https://skleptest.pl/|https://skleptest.pl/|smart-link]<br/>
+# Przechodzimy do zakładek<br/>
+# Klikamy na zakładkę “ABOUT US“<br/>
+# Zostajemy przekierowani nas do zakładki “CONTACT“, gdzie możemy zauważyć, że obie zakładki równocześnie podświetlają się na czerwono<br/>
+<br/>
+*Rzeczywisty rezultat:*<br/>
+<br/>
+Po wejściu na zakładkę “ABOUT US“ zostajemy przekierowani do zakładki “CONTACT“ oraz podświetlają się obie jednocześnie na czerwono.<br/>
+<br/>
+*Oczekiwany rezultat:*<br/>
+<br/>
+Po wejściu na zakładkę “ABOUT US“ zostajemy poprawnie do niej przekierowani.<br/>
+<br/>
+*Załącznik:*<br/>
+<br/>
+!image-20230509-171003.png|width=931,height=372!
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    Zakładki</td>
+                                            <td class="statuscategorychangedate"> 04/maj/23 7:24 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Do zrobienia</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10019">      0|i000av:2
+  </td>
+                                            <td class="customfield_10020">Sprint 1</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+
+
+                <tr id="issuerow10089" rel="10089" data-issuekey="ATW20-83" class="issuerow">
+                                            <td class="project">    Akademia Testowania Wieczorowa 25.04
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="ATW20-83" href="https://akademiatestowania.atlassian.net/browse/ATW20-83">ATW20-83</a>
+</td>
+                                            <td class="summary"><p>
+                Podświetla się na czerwono równocześnie zakładka &#39;&#39;SHOP&#39;&#39; i &#39;&#39;CATEGORIES&#39;&#39;
+    </p>
+</td>
+                                            <td class="issuetype">    Błąd w programie
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;New&lt;/span&gt;">New</span>    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="resolution">    <em>Nierozwiązane</em>
+</td>
+                                            <td class="assignee">            Justyna Ghany
+    </td>
+                                            <td class="reporter">            Justyna Ghany
+    </td>
+                                            <td class="creator">            Justyna Ghany
+    </td>
+                                            <td class="created"> 04/maj/23 6:33 PM </td>
+                                            <td class="lastViewed"> 09/maj/23 7:52 PM </td>
+                                            <td class="updated"> 04/maj/23 7:24 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">2</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      *Opis:* <br/>
+<br/>
+Po wejściu na stronę główną podświetla się na czerwono równocześnie zakładka &#39;&#39;SHOP&#39;&#39; i &#39;&#39;CATEGORIES&#39;&#39;<br/>
+<br/>
+*Środowisko:*<br/>
+Testowe 01<br/>
+<br/>
+*Priorytet:* <br/>
+<br/>
+Niski<br/>
+<br/>
+*Impact:*<br/>
+<br/>
+Niski<br/>
+<br/>
+*Kroki do reprodukcji:*<br/>
+<br/>
+# Otwieramy stronę [https://skleptest.pl/|https://skleptest.pl/|smart-link] <br/>
+# Przechodzimy do zakładek<br/>
+# Po załadowaniu strony obie kategorie &#39;&#39;SHOP&#39;&#39; i &#39;&#39;CATEGORIES&#39;&#39; podświetlają się na czerwono.<br/>
+<br/>
+*Rzeczywisty rezultat:*<br/>
+<br/>
+Po wejściu na stronę obie zakładki &#39;&#39;SHOP&#39;&#39; i &#39;&#39;CATEGORIES&#39;&#39; podświetlają się na czerwono.<br/>
+<br/>
+*Oczekiwany rezultat:*<br/>
+<br/>
+Po wejściu na stronę , tylko zakładka “SHOP“ podświetla się na czerwono.<br/>
+<br/>
+*Załącznik:*<br/>
+<br/>
+!2023-05-04 18 30 01.mp4|width=1672,height=858!
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    Zakładki</td>
+                                            <td class="statuscategorychangedate"> 04/maj/23 7:24 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">Do zrobienia</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10019">      0|i000av:1
+  </td>
+                                            <td class="customfield_10020">Sprint 1</td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10000"></td>
+                    </tr>
+        </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="44"><font size="1">
+        Wygenerowane (Tue May 09 18:57:31 UTC 2023) przez Justyna Ghany z użyciem systemu Jira 1001.0.0-SNAPSHOT#100225-sha1:b79b7f618a4dbfbbc723a206002fea409f215463.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
