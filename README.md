@@ -1,6 +1,6 @@
 # Portfolio
 <h1>Moje portfolio testerskie </h1> 
-- Szkoła testowania https://testuj.pl/karta-szkolenia/kurs-it-online-wieczorowa-akademia-testowania-plus
+
 - Akademia Testowania – Wieczorowa + SQL
 Kurs ONLINE – Testuj.pl – TestArmy Group S.A.
 (https://testuj.pl/karta-szkolenia/kurs-it-online-wieczorowa-akademia-testowania-plus)
