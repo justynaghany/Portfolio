@@ -1,10 +1,11 @@
 # Portfolio
 <h1>Moje portfolio testerskie </h1> 
 - Szkoła testowania https://testuj.pl/karta-szkolenia/kurs-it-online-wieczorowa-akademia-testowania-plus
-<h3>Odbyte kursy </h3> 
 - Akademia Testowania – Wieczorowa + SQL
 Kurs ONLINE – Testuj.pl – TestArmy Group S.A.
 (https://testuj.pl/karta-szkolenia/kurs-it-online-wieczorowa-akademia-testowania-plus)
+
+<h3>Odbyte kursy </h3> 
 
 - Rails Girls
 2-dniowe warsztaty programowania Ruby on Rails
