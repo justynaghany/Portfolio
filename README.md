@@ -10,11 +10,8 @@ Kurs ONLINE – Testuj.pl – TestArmy Group S.A.
 - Rails Girls
 2-dniowe warsztaty programowania Ruby on Rails
 (https://railsgirls.com/krakow.html)
-- Praktyczny kurs testowania oprogramowania
-- Kurs internetowy UDEMY
-- Jira od podstaw - zarządzanie projektami
- - Kurs internetowy UDEMY
-- SQL – język zapytań do bazy danych SQL Server
- - Kurs internetowy UDEMY
+- Praktyczny kurs testowania oprogramowania - Kurs internetowy UDEMY
+- Jira od podstaw - zarządzanie projektami - Kurs internetowy UDEMY
+- SQL – język zapytań do bazy danych SQL Server - Kurs internetowy UDEMY
 <h3>Przeczytane ksiażki </h3>
 <h3>Portale i grupy testerskie </h3>
