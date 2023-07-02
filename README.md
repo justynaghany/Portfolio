@@ -13,4 +13,6 @@ Kurs ONLINE – Testuj.pl – TestArmy Group S.A.
 - Jira od podstaw - zarządzanie projektami - Kurs internetowy UDEMY
 - SQL – język zapytań do bazy danych SQL Server - Kurs internetowy UDEMY
 <h3>Przeczytane ksiażki </h3>
-<h3>Portale i grupy testerskie </h3>
+
+Podróż przez świat testowania - Natalia Pawlak i Karolina Pawłowska
+
