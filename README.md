@@ -8,8 +8,8 @@ Kurs ONLINE – Testuj.pl – TestArmy Group S.A.
 <h3>Odbyte kursy </h3> 
 
 <ul>
-<ol>Rails Girls - 2-dniowe warsztaty programowania Ruby on Rails
-(https://railsgirls.com/krakow.html)   </ol>
+<p>Rails Girls - 2-dniowe warsztaty programowania Ruby on Rails
+(https://railsgirls.com/krakow.html)   </p>
 <ol>Praktyczny kurs testowania oprogramowania - Kurs internetowy UDEMY  </ol>
 <ol>Jira od podstaw - zarządzanie projektami - Kurs internetowy UDEMY  </ol>
 <ol>SQL – język zapytań do bazy danych SQL Server - Kurs internetowy UDEMY  </ol>
