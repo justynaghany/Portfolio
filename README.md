@@ -6,10 +6,14 @@ Kurs ONLINE – Testuj.pl – TestArmy Group S.A.
 <br> (https://testuj.pl/karta-szkolenia/kurs-it-online-wieczorowa-akademia-testowania-plus) </br>
 
 <h3>Odbyte kursy </h3> 
+
 - Rails Girls - 2-dniowe warsztaty programowania Ruby on Rails
-(https://railsgirls.com/krakow.html)   
-- Praktyczny kurs testowania oprogramowania - Kurs internetowy UDEMY 
-- Jira od podstaw - zarządzanie projektami - Kurs internetowy UDEMY 
+(https://railsgirls.com/krakow.html)
+
+- Praktyczny kurs testowania oprogramowania - Kurs internetowy UDEMY
+
+- Jira od podstaw - zarządzanie projektami - Kurs internetowy UDEMY
+  
 - SQL – język zapytań do bazy danych SQL Server - Kurs internetowy UDEMY
 <h3>Przeczytane ksiażki </h3>
 
