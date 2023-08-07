@@ -7,14 +7,14 @@ Kurs ONLINE – Testuj.pl – TestArmy Group S.A.
 
 <h3>Odbyte kursy </h3> 
 
-<li>
+<ul>
 <ol>Rails Girls - 2-dniowe warsztaty programowania Ruby on Rails
 (https://railsgirls.com/krakow.html)   </ol>
 <ol>Praktyczny kurs testowania oprogramowania - Kurs internetowy UDEMY  </ol>
 <ol>Jira od podstaw - zarządzanie projektami - Kurs internetowy UDEMY  </ol>
 <ol>SQL – język zapytań do bazy danych SQL Server - Kurs internetowy UDEMY  </ol>
 
-  </li>
+  </ul>
 <h3>Przeczytane ksiażki </h3>
 
 Podróż przez świat testowania - Natalia Pawlak i Karolina Pawłowska
