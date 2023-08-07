@@ -3,7 +3,7 @@
 
 - Akademia Testowania – Wieczorowa + SQL
 Kurs ONLINE – Testuj.pl – TestArmy Group S.A.
-<span> (https://testuj.pl/karta-szkolenia/kurs-it-online-wieczorowa-akademia-testowania-plus) </span>
+<p> (https://testuj.pl/karta-szkolenia/kurs-it-online-wieczorowa-akademia-testowania-plus) </p>
 
 <h3>Odbyte kursy </h3> 
 
